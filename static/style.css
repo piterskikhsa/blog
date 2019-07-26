@@ -1,0 +1,365 @@
+@font-face {
+    font-family: Museo Cyrl;
+    src: url(fonts/Museo_Cyrl_900.otf);
+}
+@font-face {
+    font-family: Circe Rounded;
+    src: url(fonts/Circe_Rounded_Alt_Bold.otf);
+    font-style: bold;
+    font-weight: 700;
+}
+@font-face {
+    font-family: Circe Rounded;
+    src: url(fonts/Circe_Rounded.otf);
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: Circe Rounded;
+    src: url(fonts/Circe_Rounded_Bold.otf);
+    font-style: bold;
+    font-weight: 500;
+}
+@font-face {
+    font-family: Circe Rounded;
+    src: url(fonts/Circe_Rounded_Extra_Bold.otf);
+    font-style: bold;
+    font-weight: 900;
+}
+
+body, html{
+    font-family: Circe Rounded;
+    font-weight: 200;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: -0.416667px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Museo Cyrl;
+    color: #010101;
+}
+
+h1{
+    font-size: 72px;
+    line-height: 86px;
+}
+h2{
+    font-size: 64px;
+    line-height: 77px;
+}
+h3{
+    font-size: 48px;
+    line-height: 58px;
+}
+h4{
+    font-size: 36px;
+    line-height: 43px;
+}
+h5{
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.mr-2{
+    margin-right: 0.5rem;
+}
+.mr-3{
+    margin-right: 1rem;
+}
+.disable{
+    cursor: text;
+}
+.after-header{
+    margin-top: 100px;
+    padding-top: 70px;
+}
+.material-icons{
+    font-family: 'Material Icons';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+.title{
+    font-family: Museo Cyrl;
+    color: #315AF2;
+}
+.base-btn{
+    font-family: Museo Cyrl;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    display: inline-block;
+    border-radius: 3px;
+    height: 100%;
+    font-size: 18px;
+    padding: 13px;
+}
+.primary-btn{
+    background-color: #315AF2;
+}
+.primary-btn:hover{
+    background-color: #315AF2;
+    opacity: 0.75;
+}
+.secondary-btn{
+    background-color: #E9399C;
+}
+
+.input-btn{
+    border: none;
+}
+
+input[type=text].simple_input, textarea.post-content{
+    border: 2px solid #CDCDCD;
+    border-radius: 3px;
+    background: #FFFFFF;
+    padding: 12px 16px;
+    box-sizing: border-box;
+}
+
+.page__header{
+    width: 100%;
+    border-bottom: 2px solid #cdcdcd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    padding: 0 20px;
+    z-index: 10;
+}
+.header-left__item{
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.breadcrumbs__item{
+    display: inline-block;
+}
+.breadcrumbs__link{
+    font-size: 24px;
+    line-height: 31px;
+    color: #010101;
+    font-weight: 700;
+}
+.breadcrumbs__link::after{
+    content: '/';
+    display: inline-block;
+    position: relative;
+    margin: 0 4px;
+}
+.breadcrumbs__item:last-of-type .breadcrumbs__link::after{
+    display: none;
+    content: '';
+}
+
+.header-right{
+    margin-right: 30px;
+}
+
+.usergroup__item{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.usergroup__item:last-of-type{
+    margin-right: 0;
+}
+
+.main-article__wrapper{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.main-article__title{
+    width: 672px;
+    font-size: 45px;
+    line-height: 52px;
+}
+
+.main-article__text{
+    width: 391px;
+    line-height: 22px;
+}
+
+.main-article__btn{
+    font-size: 36px;
+    background-color: #315AF2;
+    padding: 12px 20px;
+    line-height: 43px;
+    margin-bottom: 70px;
+}
+.main-article__btn:hover{
+    background-color: #315AF2;
+    opacity: 0.75;
+}
+.main-article__img{
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -10;
+    max-width: 50%;
+    object-fit: cover;
+}
+section{
+    border-top: 2px solid #cdcdcd;
+}
+.section-title{
+    margin-bottom: 25px;
+}
+.article__item{
+    margin-bottom: 25px;
+}
+.article__wrapper{
+    border: 2px solid #cdcdcd;
+    border-radius: 3px;
+    padding: 15px 15px;
+    height: 330px;
+    position: relative;
+}
+.article__date{
+    font-family: Circe Rounded;
+    font-size: 12px;
+    line-height: 20px;
+    color: #979797;
+}
+.article__img{
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: -10;
+    width: 100%;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+.article__subtitle{
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+}
+.article__title{
+    font-family: Circe Rounded;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 0;
+}
+.article__link{
+    color: #315AF2;
+}
+.article__header{
+    position: relative;
+}
+.new{
+    color: #E9399C;
+    text-transform: uppercase;
+    font-family: Circe Rounded;
+    font-weight: 700;
+    font-size: 16px;
+    position: relative;
+    top: -2px;
+}
+
+.article__footer{
+    vertical-align: middle;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+}
+.like-btn{
+    font-family: Circe Rounded;
+    font-size: 24px;
+    font-weight: 700;
+    color: #CDCDCD;
+}
+i.hart:after{
+    content: '';
+    background: url('./images/Vector.svg') no-repeat;
+    height: 23px;
+    width: 28px;
+    display: inline-block;
+    top: 3px;
+    position: relative;
+}
+i.comment:after{
+    content: '';
+    background: url('./images/Group.svg') no-repeat;
+    height: 20px;
+    width: 23px;
+    display: inline-block;
+    top: 2px;
+    position: relative;
+}
+i.view:after{
+    content: '';
+    background: url('./images/view.svg') no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    top: 4px;
+    position: relative;
+}
+.section{
+    margin-top: 100px;
+}
+.post-content{
+    resize: none; 
+    height: 480px;
+}
+.post-link{
+    margin: 0 0 32px 18px ;
+    
+}
+.disable-text{
+    font-size: 16px;
+    color: #c4c4c4;
+    font-family: Circe Rounded;
+    font-weight: 500;
+}
+
+.link{
+    font-family: Circe Rounded;
+    font-weight: 500;
+    font-size: 16px;
+    color: #315AF2;
+    border-bottom: 1px solid #315AF2;
+}
+.switch label input[type=checkbox]+.lever{
+    opacity: 0.4;
+}
+.switch label input[type=checkbox]:checked+.lever{
+    background-color: #315AF2 !important;
+    opacity: 1;
+}
+.switch label{
+    color: #315AF2;
+    font-size: 24px;
+    font-family: Circe Rounded;
+    font-weight: 500;
+    line-height: 31px;
+}
+.lever::after{
+    background-color: #315AF2 !important;
+}
+
+.bottom-fix{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}

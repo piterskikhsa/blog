@@ -1,0 +1,16 @@
+<article class="article__item col  s12 m6 l4">
+    <div class="article__wrapper">
+        <span class="article__date">{{ post.created | date:"d F Y G:i" }}</span>
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="article__img">
+        <span class="article__subtitle">Профессии будущего</span>
+        <h4 class="article__title article__title-small title"><a class="article__link" href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+        <div class="article__footer">
+            <a class="like-btn mr-3" href=""><i class="hart"></i>
+                25</a>
+            <a class="like-btn " href=""><i class="comment"></i>
+                25</a>
+            <a class="like-btn right" href=""><i class="view"></i>
+                25</a>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block breadcrumbs %}
+    {{ block.super }} <li class="breadcrumbs__item"><a class="breadcrumbs__link disable">Добавить статью</a></li>
+{% endblock %}
+
+{% block content %}
+    <section class="section">
+        <div class="container">
+            <h1 class="main-article__title title">Добавить статью</h1>
+            <form method="POST">
+                {% csrf_token %}
+
+                <div class="row">
+                    <div class="col l8">
+                        {{ form.title }}
+                        {{ form.title.errors }}
+                        <p class="post-link"><span class="disable-text">Ссылка: </span><a class="link" href="">kodland.org/blog/article-1</a></p>
+                    </div>
+                    <div class="col l4">
+                        <input type="submit" class="base-btn primary-btn input-btn mr-2" value="Сохранить">
+                        <input type="submit" class="base-btn secondary-btn input-btn"  value="Опубликовать">
+                    </div>
+                    <div class="col l8">
+                        {{ form.content }}
+                        {{ form.title.errors }}
+                    </div>
+                    <div class="col l4">
+                            <div class="switch">
+                                <label>
+                                    Видимость
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                </label>
+                            </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+{% endblock %}

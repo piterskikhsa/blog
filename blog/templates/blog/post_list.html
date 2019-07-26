@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if post_list %}
+        {% for post in post_list %}
+            {% if forloop.first %}
+                <article class="main-article after-header">
+                    <div class="container">
+                        <div class="main-article__wrapper">
+                            <div class="article__header">
+                                <span class="new mr-3">new</span>
+                                <a class="like-btn mr-3" href=""><i class="hart"></i>
+                                    25</a>
+                                <a class="like-btn mr-3" href=""><i class="comment"></i>
+                                    25</a>
+                                <a class="like-btn " href=""><i class="view"></i>
+                                    25</a>
+                            </div>
+                            <img class="main-article__img" src="{{ post.image.url }}" alt="статья 1" title="статья 1">
+
+                            <div class="main-article__content">
+                                <h1 class="main-article__title title">{{ post.title }}</h1>
+                                <p class="main-article__text">{{ post.content|truncatechars:255 }}</p>
+                                <a class="base-btn main-article__btn" href="{{ post.get_absolute_url }}" title="Читать">Читать</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+                <section>
+                <div class="container">
+                <h4 class="title section-title">Другие статьи</h4>
+                <div class="row">
+                {% else %}
+
+                    {% include 'includes/card.html' with post=post %}
+                 {% endif %}
+            {% endfor %}
+    {% else %}
+        <p>Посты не найдены.</p>
+    {% endif %}
+</div>
+</div>
+</section>
+    <a class="btn-floating btn-large waves-effect waves-light primary-btn bottom-fix" href="/blog/create/"><i class="material-icons">add</i></a>
+
+{% endblock %}
